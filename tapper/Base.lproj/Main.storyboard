@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tapper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,40 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="retrobg" translatesAutoresizingMaskIntoConstraints="NO" id="Yza-ke-e2q">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Yza-ke-e2q" secondAttribute="trailing" id="2NE-AB-83k"/>
+                            <constraint firstItem="Yza-ke-e2q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9fn-LJ-rPl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yza-ke-e2q" secondAttribute="trailing" constant="-20" id="LcR-cr-EDE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yza-ke-e2q" secondAttribute="bottom" id="MN6-Pw-fCP"/>
+                            <constraint firstItem="Yza-ke-e2q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YqN-S3-8EM"/>
+                            <constraint firstItem="Yza-ke-e2q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="p6Q-tn-2SM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yza-ke-e2q" secondAttribute="bottom" id="uSq-3j-bnS"/>
+                            <constraint firstItem="Yza-ke-e2q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="yiL-kH-Ecs"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LcR-cr-EDE"/>
+                                <exclude reference="p6Q-tn-2SM"/>
+                                <exclude reference="yiL-kH-Ecs"/>
+                                <exclude reference="MN6-Pw-fCP"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="510" y="301"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="retrobg" width="800" height="800"/>
+    </resources>
 </document>
